@@ -1,0 +1,127 @@
+@import url(reset.css);
+
+:root {
+  /* font-size */
+  --big-font: 2rem;
+  --medium-font: 1.5rem;
+  --base-font: 1rem;
+  --small-font: 0.8rem;
+  /* Cololr */
+  --white-color: #fff;
+  --black-color: #140a00;
+
+  /* size */
+  --small-padding: 10px;
+  --medium-padding: 30px;
+  --big-padding: 100px;
+}
+
+body {
+  font-family: "Nanum Gothic", sans-serif;
+  box-sizing: border-box;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+}
+header .logo img {
+  width: 100px;
+}
+header .menu-bar p {
+  display: inline-block;
+  color: white;
+}
+header .menu-bar p:nth-child(2) {
+  color: rgb(243, 52, 84);
+}
+
+.banner {
+  position: relative;
+}
+.banner video {
+  width: 100%;
+}
+.banner h1 {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 55%;
+  color: white;
+  font-size: 11.5vw;
+  font-weight: 700;
+  word-break: keep-all;
+  line-height: 4rem;
+}
+
+section {
+  height: 100vh;
+}
+
+section .wrapper {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--medium-padding) 0;
+}
+
+.section1 video {
+  width: 95%;
+  border-radius: 20%;
+  margin-bottom: var(--big-padding);
+}
+.section1 img {
+  position: absolute;
+  left: 0;
+}
+
+section .text {
+  font-weight: 700;
+}
+section .text .title p {
+  padding-bottom: var(--small-padding);
+}
+section .text .title h2 {
+  width: 80%;
+  font-size: 8vw;
+  font-weight: 800;
+  word-break: keep-all;
+  line-height: 5vh;
+  padding-bottom: var(--medium-padding);
+}
+section .text .dsc {
+  width: 100%;
+  font-size: 5vw;
+  word-break: keep-all;
+  line-height: 5vh;
+  padding-bottom: var(--medium-padding);
+}
+section button {
+  all: unset;
+  width: 100%;
+  border: 1px solid rgb(49, 49, 49);
+  padding: 30px 0 30px 20px;
+  font-weight: 700;
+}
+
+section button::after {
+  content: url("../content/arrow_b.svg");
+  display: inline-block;
+  width: 50px;
+}
+
+.section2 {
+  background-image: url("../content/sec2_1_m.jpg");
+  color: white;
+}
+.section2 button {
+  border: 1px solid white;
+}
+.section2 button::after {
+  content: url("../content/arrow_w.svg");
+}
