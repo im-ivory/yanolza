@@ -21,6 +21,37 @@
                 <div class="menu-bar" onclick="openNav()">
                     <p>●</p><p>●</p><p>●</p>
                 </div>
+                <nav class="pc-nav">
+                    <ul class="menu">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">What we do</a></li>
+                        <li><a href="#">Tech story</a></li>
+                        <li><a href="#">Newsroom</a></li>
+                        <li><a href="#">IR</a></li>
+                        <li><a href="#">ESG</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                    <div class="lan">
+                        <a href="#">KOR</a>
+                        <a href="#">ENG</a>
+                    </div>
+                    <div class="drop-down">
+                        <ul>
+                            <li><a href="#">Platform business</a></li>
+                            <li><a href="#">Hospitality solution</a></li>
+                            <li><a href="#">Space business</a></li>
+                            <li><a href="#">Partnership</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">공시</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">ESG vision</a></li>
+                            <li><a href="#">ESG commitments</a></li>
+                            <li><a href="#">ESG news</a></li>
+                        </ul>
+                    </div>
+                </nav>
                 <div id="mobileNav" class="mobile-nav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <div class="nav-content">
@@ -36,8 +67,12 @@
            </div>
         </header>
         <div class="banner">
-            <video muted autoplay loop>
+            <video muted autoplay loop class="mobile">
                 <source src="content/index_m.mp4" type="video/mp4">
+                <strong>Your browser does not support the video tag.</strong>
+              </video>
+              <video muted autoplay loop class="pc">
+                <source src="content/index.mp4" type="video/mp4">
                 <strong>Your browser does not support the video tag.</strong>
               </video>
             <h1>누구나 마음 편히 놀 수 있게</h1>
@@ -91,15 +126,15 @@
                 <div class="dsc">
                     <p>호텔부터 문화·주거 공간까지 공간에 대한 모든 서비스를 제공합니다.</p>
                 </div>
+                <button class="sb">
+                    Space business
+                </button>
             </article>
-            <button class="sb">
-                Space business
-            </button>
             <div class="img-wrapper">
-                <img src="content/sec3_1_m.jpg" alt="">
+                <img src="content/sec3_1.jpg" alt="">
                 <img src="content/sec3_2_m.jpg" alt="">
-                <img src="content/sec3_3_m.jpg" alt="">
-                <img src="content/sec3_4_m.jpg" alt="">
+                <img src="content/sec3_3.jpg" alt="">
+                <img src="content/sec3_4.jpg" alt="">
                 <img src="content/sec3_5_m.jpg" alt="">
             </div>
            </div>
@@ -152,6 +187,7 @@
             </article>
            </div>
         </footer>
+        
     </div>
     <script src="main.js"></script>
 </body>
