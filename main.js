@@ -28,15 +28,39 @@ const img = Array.from(imgWrapper.getElementsByTagName("img"));
       for (i=0; i<img.length; i++){
         let imgRect = img[i].getBoundingClientRect();
 
-         if(imgRect.x > 362){
+        if(window.innerWidth > 767){
+          if(imgRect.x > 362){
             img[i].style.opacity =1;
           }else if(imgRect.x < 300){
             img[i].style.opacity =0.5;
            } else if(imgRect.x < 23){
               img[i].style.opacity =0.2;
           }
+        }else{
+          img[i].style.opacity = 1;
+        }
       }
     }
 
 
   imgWrapper.addEventListener("scroll", changeOpacity);
+
+
+const scrollDown = document.querySelector(".scroll-down");
+
+      window.addEventListener('scroll', function(){
+        if(window.scrollY > 112){      
+        scrollDown.childNodes[3].style.display ="none";
+        scrollDown.classList.add("topBtn");
+        } else if(window.scrollY < 112){
+          scrollDown.childNodes[3].style.display ="block";
+          scrollDown.classList.remove("topBtn");
+        }
+      });
+
+
+      function scrollTop(){
+        window.scrollTo({top:0, left:0, behavior:'smooth'});
+     }
+
+      scrollDown.addEventListener("click", scrollTop);
