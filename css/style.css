@@ -8,14 +8,7 @@
 }
 
 :root {
-  /* font-size */
-  --big-font: 2rem;
-  --medium-font: 1.5rem;
-  --base-font: 1rem;
-  --small-font: 0.8rem;
   /* Cololr */
-  --white-color: #fff;
-  --black-color: #140a00;
   --grey-color: #a0a0a0;
   --pink-color: #ff3478;
 
