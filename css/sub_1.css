@@ -1,0 +1,39 @@
+@import url(style.css);
+
+.section1 {
+  background-image: url("../content/kv.jpg");
+  background-size: cover;
+  height: 100vh;
+  color: white;
+}
+
+.section1 .text p {
+  position: absolute;
+  top: 33%;
+  left: 5%;
+  width: 70%;
+  color: white;
+  font-size: 11.5vw;
+  font-weight: 700;
+  word-break: keep-all;
+  line-height: 14vw;
+}
+
+section h1 {
+  font-size: 9vw;
+}
+
+.section2 .title p {
+  color: rgba(0, 0, 0, 0.288);
+  font-size: 20vw;
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.section2 .title h1 {
+  color: black;
+  width: 40%;
+  line-height: 14vw;
+  word-break: keep-all;
+}
