@@ -1,4 +1,26 @@
-@import url(style.css);
+@import url(common.css);
+
+@font-face {
+  font-family: "NanumSquare";
+  src: url("../fonts/NanumSquareB.otf");
+  src: url("../fonts/NanumSquareEB.otf");
+}
+
+@font-face {
+  font-family: "NanumSquareR";
+  src: url("../fonts/NanumSquareR.otf");
+}
+
+:root {
+  /* Cololr */
+  --grey-color: #a0a0a0;
+  --pink-color: #ff3478;
+
+  /* size */
+  --small-padding: 10px;
+  --medium-padding: 30px;
+  --big-padding: 100px;
+}
 
 .section1 {
   background-image: url("../content/kv.jpg");
@@ -23,6 +45,19 @@ section h1 {
   font-size: 9vw;
 }
 
+.section2 {
+  background-image: unset;
+  color: black;
+}
+
+.section2 article .wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin: 0 auto;
+  padding: var(--big-padding) 0;
+}
+
 .section2 .title p {
   color: rgba(0, 0, 0, 0.288);
   font-size: 20vw;
@@ -36,4 +71,29 @@ section h1 {
   width: 40%;
   line-height: 14vw;
   word-break: keep-all;
+}
+
+.section2 article img {
+  width: 100%;
+  margin-bottom: var(--small-padding);
+}
+.section2 article .wrapper > h1 {
+  font-size: 10vw;
+  margin-bottom: var(--small-padding);
+}
+
+.section2 article .title h3 {
+  font-family: "NanumSquareR";
+  color: var(--grey-color);
+  font-size: 6vw;
+  margin-bottom: var(--small-padding);
+}
+.section2 article .title h2 {
+  font-size: 7vw;
+  margin-bottom: var(--small-padding);
+}
+.section2 article .dsc p {
+  font-family: "NanumSquareR";
+  font-size: 4vw;
+  line-height: 6vh;
 }
