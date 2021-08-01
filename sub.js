@@ -3,7 +3,6 @@ const pcNav = document.querySelector(".pc-nav");
 const dropDown = document.querySelector(".drop-down");
 const familySite = document.querySelector(".family-site");
 const siteList = document.querySelector(".site-list");
-const siteBtn = familySite.querySelector(".title img");
 
 // -----모바일 메뉴 클릭-----
 function openNav() {
@@ -32,28 +31,6 @@ function showSiteList(){
 
 familySite.addEventListener("click", showSiteList);
 
-
-// -----section3 스크롤에 따라 이미지 투명도 조절-----
-const imgWrapper = document.querySelector(".img-wrapper");
-const img = Array.from(imgWrapper.getElementsByTagName("img"));
-
-function changeOpacity(){
-  for (i=0; i<img.length; i++){
-    let imgRect = img[i].getBoundingClientRect();
-
-    if(window.innerWidth > 767){
-      if(imgRect.x > 362){
-        img[i].style.opacity =1;
-      }else if(imgRect.x < 300){
-        img[i].style.opacity =0.3;
-      }
-    }else{
-      img[i].style.opacity = 1;
-    }
-  };
-};
-
-imgWrapper.addEventListener("scroll", changeOpacity);
 
 
 // -----스크롤 다운 버튼 바뀌게 하기-----
@@ -90,15 +67,15 @@ $("html").on('mousewheel',function(e){
      }
   });
 
-  // // -----sub page-----
-  // $(".section2").on('mousewheel',function(e){
-  //   var wheel = e.originalEvent.wheelDelta;
+    // -----sub page-----
+  $(".section2").on('mousewheel',function(e){
+    var wheel = e.originalEvent.wheelDelta;
   
-  //     if(wheel>0){
-  //       // $("#background-text").css("transform", "translateX(-100px)");
-  //       console.log("hi");
-  //       } else {
-  //       // $(".header").css("top",- $(".header").height() + "px");
-  //       console.log("bye");
-  //       }
-  //   });
+      if(wheel>0){
+        $("#background-text").css("transform", "translateX(-100px)");
+        console.log("hi");
+        } else {
+            $("#background-text").css("transform", "translateX(100px)");
+        console.log("bye");
+        }
+    });
