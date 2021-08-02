@@ -1,4 +1,5 @@
 const mobileNav = document.getElementById("mobileNav");
+const header = document.querySelector(".header");
 const pcNav = document.querySelector(".pc-nav");
 const dropDown = document.querySelector(".drop-down");
 const familySite = document.querySelector(".family-site");
@@ -15,14 +16,37 @@ function closeNav() {
 
 // -----pc 메뉴 hover-----
 function showDropDown(){
-  dropDown.style.height = "10vw";
-};
-function closeDropDown(){
-  dropDown.style.height = "0%";
+  if (header.classList.contains("white") == true){
+    dropDown.style.height = "10vw";
+  }else{
+    dropDown.style.height = "15vw";
+    pcNav.classList.add("black");
+  }
 };
 
-pcNav.addEventListener("mouseenter", showDropDown);
-dropDown.addEventListener("mouseleave", closeDropDown);
+
+
+function closeDropDown(){
+  dropDown.style.height = "0%";
+  pcNav.classList.remove("black");
+};
+
+
+$(window).scroll(function () { 
+  var scrollValue = $(document).scrollTop(); 
+  if(scrollValue > 650){
+    $(".header").addClass("white");
+    $(".header .drop-down").addClass("white");
+  }else{
+    $(".header").removeClass("white");
+    $(".header .drop-down").removeClass("white");
+  }
+ });
+
+
+
+header.addEventListener("mouseenter", showDropDown);
+header.addEventListener("mouseleave", closeDropDown);
 
 // -----footer Family Site 클릭-----
 function showSiteList(){
@@ -69,12 +93,19 @@ window.addEventListener('scroll', function(){
   }
 });
 
-// -----스크롤 탑 버튼-----
-function scrollTop(){
-  window.scrollTo({top:0, left:0, behavior:'smooth'});
-};
 
-scrollDown.addEventListener("click", scrollTop);
+// -----스크롤 탑 버튼-----
+// function scrollTop(){
+//   window.scrollTo({top:0, left:0, behavior:'smooth'});
+// };
+
+// scrollDown.addEventListener("click", scrollTop);
+
+
+$(".scroll-down").on('click',function(){
+  $( 'html, body' ).stop().animate( { scrollTop : 0 } )
+  $(".header").css("top", "0");
+  });
 
 
 // -----pc 메뉴 스크롤 감지에 따라 보이기-----
@@ -90,15 +121,12 @@ $("html").on('mousewheel',function(e){
      }
   });
 
-  // // -----sub page-----
-  // $(".section2").on('mousewheel',function(e){
-  //   var wheel = e.originalEvent.wheelDelta;
-  
-  //     if(wheel>0){
-  //       // $("#background-text").css("transform", "translateX(-100px)");
-  //       console.log("hi");
-  //       } else {
-  //       // $(".header").css("top",- $(".header").height() + "px");
-  //       console.log("bye");
-  //       }
-  //   });
+
+
+  jQuery(document).ready(function() {
+    setTimeout(function(){
+      $( ".banner .wrapper" ).addClass( "active" );
+      $( ".banner .wrapper h1" ).css("visibility", "visible");
+    }, 800)
+
+ });
